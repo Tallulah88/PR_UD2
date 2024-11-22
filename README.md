@@ -16,28 +16,29 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 
 ## **Instrucciones para su ejecución**
 
-Clonar el Repositorio
+Clonar el Repositorio:
 
     git clone https://github.com/Tallulah88/PR_UD2
     cd PR_UD2
 
-Levantar el Entorno con Docker
+Levantar el Entorno con Docker:
 
     docker compose up -d
 
-Acceder a los Servicios
+Acceder a los Servicios:
 
     Frontend: http://localhost:8080
     Backend: http://localhost:3000
 
 
-Detener los Servicios
+Detener los Servicios:
 
     docker compose down
 
 ## **Funcionalidades**
 
 El cliente permite realizar las siguientes operaciones sobre la API REST:
+
 Clase Storage (/api/hello)
 
     GET /api/hello: Obtiene un mensaje de bienvenida.
