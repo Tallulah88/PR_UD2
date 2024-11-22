@@ -1,4 +1,5 @@
 # **Cliente API REST**
+![Captura de la Aplicación](./assets/screenshot.png)
 ## **Descripción**
 
 Este proyecto es un cliente web que consume una API REST para gestionar datos en diferentes formatos: Storage (clase genérica), JSON, y CSV. El cliente permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los datos mediante una interfaz sencilla.
