@@ -1,4 +1,3 @@
-# **Cliente API REST**
 ![Captura de la Aplicación](./assets/screenshot.png)
 ## **Descripción**
 
