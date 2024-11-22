@@ -1,10 +1,11 @@
-Cliente API REST
-Descripción
+# **Cliente API REST**
+## **Descripción**
 
 Este proyecto es un cliente web que consume una API REST para gestionar datos en diferentes formatos: Storage (clase genérica), JSON, y CSV. El cliente permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los datos mediante una interfaz sencilla.
 
 El backend expone una API REST implementada con Node.js y Express, mientras que el frontend utiliza Vue.js como framework. Docker se utiliza para contenerizar ambos servicios y facilitar la ejecución del entorno de desarrollo.
-Requisitos
+
+## **Requisitos**
 
 Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 
@@ -12,22 +13,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
     Docker
     Docker Compose
 
-Estructura del Proyecto
-
-El proyecto está organizado de la siguiente manera:
-
-PR_UD2/
-├── frontend/         # Código del cliente (Vue.js)
-│   ├── src/          # Archivos fuente de Vue.js
-│   ├── public/       # Archivos estáticos
-│   ├── package.json  # Dependencias del frontend
-├── backend/          # Código del servidor (Node.js)
-│   ├── server.js     # Archivo principal del backend
-│   ├── package.json  # Dependencias del backend
-├── docker-compose.yml # Configuración para levantar el entorno completo
-└── README.md         # Instrucciones del proyecto
-
-Funcionalidades
+## **Funcionalidades**
 
 El cliente permite realizar las siguientes operaciones sobre la API REST:
 Clase Storage (/api/hello)
@@ -54,52 +40,37 @@ CSV (/api/csv)
     PUT /api/csv/{filename}: Actualiza un archivo CSV.
     DELETE /api/csv/{filename}: Elimina un archivo CSV.
 
-Instrucciones para Ejecutar el Proyecto
+## **Instrucciones para su ejecución**
 
 Sigue los pasos a continuación para levantar el entorno local:
 
-    Clonar el Repositorio
+Clonar el Repositorio
 
-git clone <url_repo>
-cd <nombre_del_repositorio>
+    git clone <url_repo>
+    cd <nombre_del_repositorio>
+
 
 Levantar el Entorno con Docker
 
-    Ejecuta el siguiente comando para levantar los servicios del frontend y el backend:
+Ejecuta el siguiente comando para levantar los servicios del frontend y el backend:
 
     docker compose up -d
 
+
 Acceder a los Servicios
 
-    Frontend: Abre en tu navegador la URL:
+Frontend: Abre en tu navegador la URL:
 
-http://localhost:8080
+    http://localhost:8080
 
 Backend: Puedes acceder a las rutas de la API REST directamente:
 
     http://localhost:3000
 
-Detener los Servicios (Opcional)
 
-    Si necesitas detener el entorno, usa:
+Detener los Servicios
 
-        docker compose down
 
-Notas Adicionales
+Si necesitas detener el entorno, usa:
 
-    Variables de Entorno
-        El proyecto puede configurarse utilizando un archivo .env. Asegúrate de incluir las URLs correctas para el backend si cambias los puertos predeterminados.
-
-    Pruebas
-        Para verificar que las rutas del backend funcionan correctamente, utiliza herramientas como Postman, Insomnia o cURL.
-
-    Resolución de Problemas
-        Si Docker no encuentra los cambios recientes en tu código, fuerza una reconstrucción de las imágenes:
-
-    docker compose up --build
-
-Despliegue
-
-    Este proyecto está diseñado para entornos de desarrollo. Para producción, recuerda construir el frontend con:
-
-npm run build
+    docker compose down
