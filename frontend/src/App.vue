@@ -22,7 +22,10 @@
         <h2>Operaciones /api/json</h2>
         <div class="button-group">
           <button @click="getJson">GET /api/json</button>
+          <button @click="getJsonFile">GET /api/json/{filename}</button>
           <button @click="postJson">POST /api/json</button>
+          <button @click="putJsonFile">PUT /api/json/{filename}</button>
+          <button @click="deleteJsonFile">DELETE /api/json/{filename}</button>
         </div>
       </section>
 
@@ -31,7 +34,10 @@
         <h2>Operaciones /api/csv</h2>
         <div class="button-group">
           <button @click="getCsv">GET /api/csv</button>
+          <button @click="getCsvFile">GET /api/csv/{filename}</button>
           <button @click="postCsv">POST /api/csv</button>
+          <button @click="putCsvFile">PUT /api/csv/{filename}</button>
+          <button @click="deleteCsvFile">DELETE /api/csv/{filename}</button>
         </div>
       </section>
 
@@ -86,6 +92,10 @@ export default {
       const res = await axios.get("http://localhost:3000/api/json");
       this.response = res.data;
     },
+    async getJsonFile() {
+      const res = await axios.get("http://localhost:3000/api/json/archivo.json");
+      this.response = res.data;
+    },
     async postJson() {
       const res = await axios.post("http://localhost:3000/api/json", {
         nombre: "archivo.json",
@@ -93,8 +103,22 @@ export default {
       });
       this.response = res.data;
     },
+    async putJsonFile() {
+      const res = await axios.put("http://localhost:3000/api/json/archivo.json", {
+        contenido: { clave: "nuevo valor" },
+      });
+      this.response = res.data;
+    },
+    async deleteJsonFile() {
+      const res = await axios.delete("http://localhost:3000/api/json/archivo.json");
+      this.response = res.data;
+    },
     async getCsv() {
       const res = await axios.get("http://localhost:3000/api/csv");
+      this.response = res.data;
+    },
+    async getCsvFile() {
+      const res = await axios.get("http://localhost:3000/api/csv/archivo.csv");
       this.response = res.data;
     },
     async postCsv() {
@@ -104,86 +128,16 @@ export default {
       });
       this.response = res.data;
     },
+    async putCsvFile() {
+      const res = await axios.put("http://localhost:3000/api/csv/archivo.csv", {
+        contenido: "dato1 actualizado,dato2 actualizado",
+      });
+      this.response = res.data;
+    },
+    async deleteCsvFile() {
+      const res = await axios.delete("http://localhost:3000/api/csv/archivo.csv");
+      this.response = res.data;
+    },
   },
 };
 </script>
-
-<style>
-/* General container styles */
-.app-container {
-  font-family: Arial, sans-serif;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Header styles */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-header h1 {
-  font-size: 2rem;
-  color: #333;
-}
-
-/* Section styles */
-.operation-section {
-  margin-bottom: 20px;
-}
-.operation-section h2 {
-  font-size: 1.5rem;
-  color: #555;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-/* Button group styles */
-.button-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Response section */
-.response-section h2 {
-  font-size: 1.5rem;
-  color: #555;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-pre {
-  background: #f4f4f4;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow-x: auto;
-  max-height: 200px;
-}
-
-/* Footer styles */
-footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #777;
-}
-</style>
