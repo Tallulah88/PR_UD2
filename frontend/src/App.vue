@@ -141,3 +141,119 @@ export default {
   },
 };
 </script>
+
+<style>
+/* General container styles */
+.app-container {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #4a4a4a;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styles */
+.operation-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.operation-section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Button group styles */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+button:active {
+  background-color: #003f7f;
+}
+
+/* Response section */
+.response-section {
+  padding: 20px;
+  background-color: #eef6ff;
+  border-radius: 8px;
+  border: 1px solid #b3d4fc;
+  margin-top: 20px;
+}
+.response-section h2 {
+  font-size: 1.8rem;
+  color: #004085;
+  border-bottom: 2px solid #b3d4fc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+pre {
+  background: #f4f4f4;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  max-height: 300px;
+  overflow-y: auto;
+  color: #333;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+  }
+  .button-group {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+</style>
