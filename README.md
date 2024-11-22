@@ -27,8 +27,11 @@ Levantar el Entorno con Docker:
 
 Acceder a los Servicios:
 
-    Frontend: http://localhost:8080
-    Backend: http://localhost:3000
+    Frontend:
+    http://localhost:8080
+    
+    Backend:
+    http://localhost:3000
 
 
 Detener los Servicios:
