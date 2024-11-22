@@ -14,6 +14,27 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
     Docker
     Docker Compose
 
+## **Instrucciones para su ejecución**
+
+Clonar el Repositorio
+
+    git clone https://github.com/Tallulah88/PR_UD2
+    cd PR_UD2
+
+Levantar el Entorno con Docker
+
+    docker compose up -d
+
+Acceder a los Servicios
+
+    Frontend: http://localhost:8080
+    Backend: http://localhost:3000
+
+
+Detener los Servicios
+
+    docker compose down
+
 ## **Funcionalidades**
 
 El cliente permite realizar las siguientes operaciones sobre la API REST:
@@ -40,38 +61,3 @@ CSV (/api/csv)
     POST /api/csv: Crea un archivo CSV.
     PUT /api/csv/{filename}: Actualiza un archivo CSV.
     DELETE /api/csv/{filename}: Elimina un archivo CSV.
-
-## **Instrucciones para su ejecución**
-
-Sigue los pasos a continuación para levantar el entorno local:
-
-Clonar el Repositorio
-
-    git clone <url_repo>
-    cd <nombre_del_repositorio>
-
-
-Levantar el Entorno con Docker
-
-Ejecuta el siguiente comando para levantar los servicios del frontend y el backend:
-
-    docker compose up -d
-
-
-Acceder a los Servicios
-
-Frontend: Abre en tu navegador la URL:
-
-    http://localhost:8080
-
-Backend: Puedes acceder a las rutas de la API REST directamente:
-
-    http://localhost:3000
-
-
-Detener los Servicios
-
-
-Si necesitas detener el entorno, usa:
-
-    docker compose down
